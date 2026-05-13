@@ -13,6 +13,7 @@ body{
 /*Główne*/
 nav{
     position: fixed;
+    top: 0;
     width: 100%;
     cursor: pointer;
     text-align: center;
@@ -151,13 +152,13 @@ main{
     main{
       grid-template-columns: 1fr;
     }
-    .shere{
+    #shere{
       order: 2;
     }
     .page{
       order: 1;
     }
-    .media{
+    #media{
       order: 3;
     }
     .links{
@@ -170,6 +171,7 @@ main{
     height: 100%;
     min-height: 79vh;
     margin: 0;
+    padding: 16px;
     border-left: solid 1px rgb(191, 215, 228);
     border-right: solid 1px rgb(191, 215, 228);
 }
@@ -178,12 +180,13 @@ main{
     margin: 10px;
 }
 
-.shere{
+#shere{
     padding-top: 10px;
 }
 
-.media{
+#media{
     max-width: 100%;
+    padding-top: 10px;
 }
 
 .links{
@@ -196,6 +199,14 @@ main{
     max-width: 40px;
     max-height: 40px;
 }
+.links img:hover{
+    opacity: 0.75;
+}
+.aside{
+    position: sticky;
+    top: 100px;
+    height: max-content;
+}
 aside p{
     text-align: center;
     margin: auto;
@@ -204,16 +215,32 @@ aside p{
     color: #234c62;
 }
 
+h1{
+    color: #a12626;
+}
+h2{
+    color: #234c62;
+}
+.page img{
+    max-width: 100%;
+    border-radius: 20px;
+}
+#imgdis{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    color: #234c62;
+}
 
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 /*Stopka*/
 footer{
     text-align: center;
-    height: 100px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    background-color: gray;
+    height: 200px;
+    background-color: #f7efe0;
+    box-shadow: 0px 5px 15px 0px white inset;
+    padding-top: 10px;
 }
 footer a{
     display: block;
@@ -230,4 +257,25 @@ footer a{
 footer a:active{
     cursor: pointer;
     color: red;
+}
+.fcontent{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    column-gap: 80px;
+}
+#massage{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+#copyright{
+    text-align: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto;
+}
+footer p{
+    padding: 5px;
+    color: #234c62;
 }
