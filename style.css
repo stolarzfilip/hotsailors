@@ -13,6 +13,7 @@ body{
 /*Główne*/
 nav{
     position: fixed;
+    z-index: 2;
     top: 0;
     width: 100%;
     cursor: pointer;
@@ -204,6 +205,7 @@ main{
 }
 .aside{
     position: sticky;
+    z-index: 1;
     top: 100px;
     height: max-content;
 }
