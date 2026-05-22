@@ -1,0 +1,325 @@
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+/*Menu nawigacyjne*/
+/*Główne*/
+nav{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    min-width: 100px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.20);
+    background-color: #f7efe0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+nav a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 10px 7px 10px;
+    color: #234c62;
+}
+@media (hover: hover){
+    nav a:hover{
+        border-bottom: 3px solid #C40000;
+        color: #C40000;
+        cursor: pointer;
+    }
+}
+nav a:active{
+    border-bottom: 3px solid #C40000;
+    color: #C40000;
+    cursor: pointer;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*Button bez stylu (dla hamburger menu)*/
+nav button{           
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    color: #234c62;
+    background-color: #f7efe0;
+}
+@media (hover: hover){
+    nav button:hover{
+        border: 3px solid #C40000;
+        color: #C40000;
+        cursor: pointer;
+    }
+}
+nav button:active{
+    border: 3px solid #C40000;
+    color: #C40000;
+    cursor: pointer;
+}
+
+
+/*Nawigacja Baner (góra)*/
+.baner{
+    display: grid;
+    grid-template-columns: 60px auto /*50px*/; /*Wyszukiwanie w przyszłości*/
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.baner div{
+    height: 60px;
+}
+.baner a{
+    padding: 0;
+}
+
+/*Styl i ustawienie loga (góra)*/
+#hamburger{
+    font-weight: bold;
+    font-size: 20px;
+}
+#hotsailors{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    margin: auto;
+}
+#hotsailors a{
+    display: block;
+    height: 57px;
+}
+#Logo_HS{
+    float: left;
+    max-width: 56px;
+    max-height: 56px;
+    padding-top: 1px;
+}
+#hot{
+    float: left;
+    color: #a12626;
+    display: flex;
+    align-items: center;
+    height: 58px;
+}
+#sailors{
+    float: left;
+    color: #234c62;
+    display: flex;
+    align-items: center;
+    height: 58px;
+}
+
+
+/*Nawigacja Menu (dół)*/
+.menu{
+    display: none;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.menu li{
+    height: 42px;
+    font-size: 18px;
+}
+.menu.active{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+@media (max-width: 920px){
+    nav .baner{
+        max-width: 100%;
+    }
+    nav .menu{
+        max-width: 100%;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+main{
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 5fr 3fr;
+    max-width: 1200px;
+    width: 100%;
+    min-height: 90%;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+@media (max-width: 650px){
+    main{
+      grid-template-columns: 1fr;
+    }
+    #shere{
+      order: 2;
+    }
+    .page{
+      order: 1;
+    }
+    #media{
+      order: 3;
+    }
+    .links{
+        float: left;
+    }
+}
+
+.page{
+    max-width: 100%;
+    height: 100%;
+    min-height: 80%;
+    margin: 0;
+    padding: 16px;
+    border-left: solid 1px rgb(191, 215, 228);
+    border-right: solid 1px rgb(191, 215, 228);
+}
+.page div{
+    padding: auto;
+    margin: 10px;
+}
+.page img{
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+#shere{
+    padding-top: 10px;
+}
+
+#media{
+    max-width: 100%;
+    padding-top: 10px;
+}
+
+.links{
+    text-align: center;
+    margin: auto;
+    max-width: 50px;
+    padding: 5px 15px;
+}
+.links img{
+    max-width: 40px;
+    max-height: 40px;
+}
+.links img:hover{
+    opacity: 0.75;
+}
+.aside{
+    position: sticky;
+    z-index: 1;
+    top: 100px;
+    height: max-content;
+}
+aside p{
+    text-align: center;
+    margin: auto;
+    max-width: 100px;
+    padding: 10px 15px;
+    color: #234c62;
+}
+
+h1{
+    color: #a12626;
+}
+h2{
+    color: #234c62;
+}
+#imgdis{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    color: #234c62;
+}
+#insta{
+    padding: 16px;
+}
+
+@media (max-width: 920px){
+    body .main{
+        max-width: 100%;
+    }
+    article .articleSelect{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+        padding-right: 20px;
+    }
+    article .articleSelect div{
+        padding: 0;
+    }
+}
+
+@media (max-width: 650px){
+    body .main{
+        max-width: 100%;
+    }
+    article .articleSelect{
+        grid-template-columns: 1fr;
+        padding-right: 20px;
+    }
+    main .aside{
+        position: static;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+/*Stopka*/
+footer{
+    text-align: center;
+    height: 200px;
+    background-color: #f7efe0;
+    box-shadow: 0px 5px 15px 0px white inset;
+    padding-top: 10px;
+}
+footer a{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+}
+.fcontent{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    column-gap: 80px;
+}
+#massage{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+#copyright{
+    text-align: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto;
+}
+footer p{
+    padding: 5px;
+    color: #234c62;
+}
+
+@media (max-width: 850px){
+    body footer{
+        height: 272px;
+    }
+    footer .fcontent{
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+    }
+}
