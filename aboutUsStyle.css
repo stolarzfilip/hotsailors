@@ -166,28 +166,39 @@ main{
     height: 100%;
     min-height: 79vh;
     margin: 0;
-    padding: 16px;
+    padding: 0;
     border-left: solid 1px rgb(191, 215, 228);
     border-right: solid 1px rgb(191, 215, 228);
 }
 .page div{
     padding: auto;
-    margin: 10px;
+    /*margin: 10px;*/
 }
 
-.totheleft{
+.textAbout{
+    padding: 26px;
+}
+.tothe{
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
     margin: 0 auto;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
-.totheright{
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    width: 100%;
-    margin: 0 auto;
+.tothe div{
+    color: white;
+    background-color: #a12626;
+    border-radius: 20px;
+    margin: 26px;
 }
-
+.photos{
+    padding: 0;
+}
+.photos p{
+    padding: 0 26px;
+}
 h1{
     color: #a12626;
 }
@@ -223,13 +234,16 @@ h2{
     body .main{
         max-width: 100%;
     }
-    article .articleSelect{
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 15px;
-        padding-right: 20px;
+    main .page{
+        padding-left: 0;
     }
-    article .articleSelect div{
+    article .tothe{
+        grid-template-columns: 1fr 1fr;
         padding: 0;
+        margin: 0;
+    }
+    article .photos p{
+        text-align: center;
     }
 }
 
@@ -237,9 +251,16 @@ h2{
     body .main{
         max-width: 100%;
     }
-    article .articleSelect{
-        grid-template-columns: 1fr;
-        padding-right: 20px;
+    main .page{
+        padding-left: 0;
+    }
+    article .tothe{
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        margin: 0;
+    }
+    article .photos p{
+        text-align: center;
     }
 }
 
