@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     min-height: 100%;
-    min-width: 330px;
+    min-width: 100px;
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
@@ -17,7 +17,7 @@ nav{
     z-index: 2;
     top: 0;
     width: 100%;
-    min-width: 330px;
+    min-width: 100px;
     cursor: pointer;
     text-align: center;
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.20);
@@ -124,6 +124,7 @@ nav button:active{
     height: 58px;
 }
 
+
 /*Nawigacja Menu (dół)*/
 .menu{
     display: none;
@@ -149,18 +150,34 @@ nav button:active{
     }
 }
 
-
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 main{
     flex: 1;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 5fr 3fr;
     max-width: 1200px;
     width: 100%;
     min-height: 90%;
     margin: 0 auto;
     padding-top: 60px;
+}
+@media (max-width: 650px){
+    main{
+      grid-template-columns: 1fr;
+    }
+    #shere{
+      order: 2;
+    }
+    .page{
+      order: 1;
+    }
+    #media{
+      order: 3;
+    }
+    .links{
+        float: left;
+    }
 }
 
 .page{
@@ -173,27 +190,23 @@ main{
     border-right: solid 1px rgb(191, 215, 228);
 }
 .page div{
+    padding: auto;
     margin: 10px;
 }
-.photos{
-    background-color: #a12626;
-    border-radius: 20px;
-    color: white;
-}
 .page img{
-    width: 100%;
-    height: auto;
+    max-width: 100%;
     border-radius: 20px;
-}
-.imgdis{
-    text-align: center;
-    color: white;
-    padding-bottom: 16px;
 }
 
-.textAbout{
-    color: #234c62;
+#shere{
+    padding-top: 10px;
 }
+
+#media{
+    max-width: 100%;
+    padding-top: 10px;
+}
+
 .links{
     text-align: center;
     margin: auto;
@@ -207,6 +220,19 @@ main{
 .links img:hover{
     opacity: 0.75;
 }
+.aside{
+    position: sticky;
+    z-index: 1;
+    top: 100px;
+    height: max-content;
+}
+aside p{
+    text-align: center;
+    margin: auto;
+    max-width: 100px;
+    padding: 10px 15px;
+    color: #234c62;
+}
 
 h1{
     color: #a12626;
@@ -214,50 +240,14 @@ h1{
 h2{
     color: #234c62;
 }
-
-.articleSelect{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+#imgdis{
+    text-align: center;
     width: 100%;
-    box-sizing: border-box;
-    overflow: auto;
-    padding-right: 30px;
-    overflow: hidden;
+    margin: auto;
+    color: #234c62;
 }
-.articleSelect div:hover{
-    border: solid #C40000 2px;
-}
-.articleSelect div{
-    padding: 0;
-    margin: 10px;
-    box-sizing: border-box;
-    min-width: 0;
-    /*background-color: #234c62;*/
-    border-radius: 20px;
-}
-.articleSelect a{
-    text-decoration: none;
-    text-align: center;
-    color: white;
-}
-.articleSelect p{
-    margin: 10px auto;
-    font-size: large;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-}
-.articleSelect span{
-    font-size: small;
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
-#artColor1 div{
-    background-color: #a12626;
-}
-#artColor2 div{
-    background-color: #234c62;
+#insta{
+    padding: 16px;
 }
 
 @media (max-width: 920px){
@@ -281,6 +271,9 @@ h2{
     article .articleSelect{
         grid-template-columns: 1fr;
         padding-right: 20px;
+    }
+    main .aside{
+        position: static;
     }
 }
 

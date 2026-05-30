@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
     <link rel="manifest" href="favicon/site.webmanifest" />
 
-    <title>Hot Sailors</title>
+    <title>HotSailors</title>
 
 </head>
 <body>
@@ -25,13 +25,13 @@
     <nav>
         <div class="baner">
             <button id="hamburger" onclick="menu()">☰</button>
-            <div id="hotsailors"> <a href="index.html"> <img id="Logo_HS" src="images/logo.png" alt="Logo_HS"> <span id="hot">Hot</span><span id="sailors">Sailors</span></a></div> <!--baner-->
+            <div id="hotsailors"> <a href="index.html"> <img id="Logo_HS" src="images/logo.webp" alt="Logo_HS" width="431px" height="440px"> <span id="hot">Hot</span><span id="sailors">Sailors</span></a></div> <!--baner-->
             <!-- <div>O</div> -->
         </div>
         <ul id="menu" class="menu">
             <li> <a href="index.html">Strona główna</a></li>
-            <li> <a href="aboutUs.html">O nas</a></li>
-            <li> <a href="contact.html">Kontakt</a></li>
+            <li> <a href="about/index.html">O nas</a></li>
+            <li> <a href="contact/index.html">Kontakt</a></li>
         </ul>
     </nav>
 
@@ -39,20 +39,34 @@
     <!--Główna treść (Main)-->
     <main id="main"> 
         <article class="page">
-            <div> <h1>Strona główna</h1></div>
-            <div> 
+            <div> <h1>Osobisty Przewodnik po Wyjątkowych Zakątkach Świata</h1></div>
+            <!--
+            <div class="photos"> 
                 <img src="images/grecja.jpg" alt="grecja">
-                <p id="imgdis">Grecja</p>
+                <p class="imgdis">Grecja</p>
             </div>
-            <div> <h2>Co na głównej</h2></div>
-            <div> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et rhoncus lacus. Morbi faucibus neque sit amet dui porttitor congue. Aenean pellentesque lectus ac eleifend suscipit. Quisque rhoncus ullamcorper finibus. Phasellus maximus interdum efficitur. Vestibulum vel lectus nulla. Mauris eleifend sed urna vitae tempor. Aenean posuere mi eu facilisis sodales. Donec sed laoreet ligula. Aliquam erat volutpat. Maecenas neque augue, eleifend id viverra eu, vehicula eu lectus.</p></div>
+            -->
+            <div class="textAbout"> 
+                <p>
+                    Myślałeś już o podróży za granicę? 
+                    Chciałbyś przeżyć tę niezapomnianą przygodę ale boisz się, że coś złego zaskoczy cię za granicą?<br>
+                    Że sobie nie poradzisz z przygotowaniem do wyjazdu i dlatego wciąż tylko planujesz i marzysz?<br><br>
+                    W takim razie witaj na pokładzie!
+                    Pokażemy ci jak bezpeiecznie i bez stresu przygotować się do podróży za granicę.
+                </p>
+            </div>
             <div> <h2>Artykuły</h2></div>
-            <div class="articleSelect">
-                <div> <a href="greece.html"> <img src="images/grecja.jpg" alt="Francja"> <p>Francja</p> <span>data: 08.05.2026</span></a></div>
-                <div> <a href="greece.html"> <img src="images/grecja.jpg" alt="Moldawia"> <p>Mołdawia</p> <span>data: 01.05.2026</span></a></div>
-                <div> <a href="greece.html"> <img src="images/grecja.jpg" alt="Cypr"> <p>Cypr</p> <span>data: 18.04.2026</span></a></div>
-                <div> <a href="greece.html"> <img src="images/grecja.jpg" alt="Chorwacja"> <p>Chorwacja</p> <span>data: 04.04.2026</span></a></div>
-                <div> <a href="article/greece.html"> <img src="images/grecja.jpg" alt="Grecja"> <p>Grecja</p> <span>data: 27.03.2026</span></a> </div>
+            <div class="articleSelect" id="artColor1">
+                <div> <a href="article/croatia/index.html"> <img src="images/chorwacja.webp" alt="Chorwacja" width="359px" height="240px"> <p>Chorwacja</p></a></div>
+                <div> <a href="article/greece/index.html"> <img src="images/grecja.webp" alt="Grecja" width="359px" height="240px"> <p>Grecja</p></a></div>
+            </div>
+            <div> <h2>Nadchodzące artykuły</h2></div>
+            <div class="articleSelect" id="artColor2">
+                <div> <!-- <a href="greece.html"> --> <img src="images/grecja.jpg" alt="Cypr" loading="lazy"> <p>Cypr</p> <!-- </a> --> </div>
+                <div> <!-- <a href="greece.html"> --> <img src="images/grecja.jpg" alt="Moldawia" loading="lazy"> <p>Mołdawia</p> <!-- </a> --> </div>
+                <div> <!-- <a href="greece.html"> --> <img src="images/grecja.jpg" alt="Francja" loading="lazy"> <p>Francja</p> <!-- </a> --> </div>
+                <div> <!-- <a href="greece.html"> --> <img src="images/grecja.jpg" alt="Litwa" loading="lazy"> <p>Litwa</p> <!-- </a> --> </div>
+                <div> <!-- <a href="greece.html"> --> <img src="images/grecja.jpg" alt="Łotwa" loading="lazy"> <p>Łotwa</p> <!-- </a> --> </div>
             </div>
         </article>
     </main>
@@ -61,13 +75,13 @@
     <!--Stopka-->
     <footer>
         <div class="fcontent">
-            <div id="hotsailors"> <a href="index.html"> <img id="Logo_HS" src="images/logo.png" alt="Logo_HS"> <span id="hot">Hot</span><span id="sailors">Sailors</span></a></div>
+            <div id="hotsailors"> <a href="index.html"> <img id="Logo_HS" src="images/logo.webp" alt="Logo_HS" width="431px" height="440px" loading="lazy"> <span id="hot">Hot</span><span id="sailors">Sailors</span></a></div>
             <div> 
                 <p>Kontakt:</p>
                 <div id="massage">
-                    <div class="links"> <a href=""> <img src="images/instagram.png" alt="instagram"></a></div>
-                    <div class="links"> <a href=""> <img src="images/facebook.png" alt="facebook"></a></div>
-                    <div class="links"> <a href=""> <img src="images/mail.png" alt="mail"></a></div>
+                    <div class="links"> <a href="https://www.instagram.com/hotsailors?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <img src="images/instagram.png" alt="instagram" width="512px" height="512px" loading="lazy"></a></div>
+                    <div class="links"> <a href="https://www.facebook.com/share/1D2pGntu9k/?mibextid=wwXIfr"> <img src="images/facebook.png" alt="facebook" width="512px" height="512px" loading="lazy"></a></div>
+                    <div class="links"> <a href="mailto:biuro.hotsailors@gmail.com"> <img src="images/mail.png" alt="mail" width="512px" height="512px" loading="lazy"></a></div>
                 </div>
             </div>
         </div>
