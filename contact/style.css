@@ -124,6 +124,7 @@ nav button:active{
     height: 58px;
 }
 
+
 /*Nawigacja Menu (dół)*/
 .menu{
     display: none;
@@ -149,7 +150,6 @@ nav button:active{
     }
 }
 
-
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 main{
@@ -166,7 +166,7 @@ main{
 .page{
     max-width: 100%;
     height: 100%;
-    min-height: 80%;
+    min-height: 69.5vh;
     margin: 0;
     padding: 16px;
     border-left: solid 1px rgb(191, 215, 228);
@@ -175,27 +175,11 @@ main{
 .page div{
     margin: 10px;
 }
-.photos{
-    background-color: #a12626;
-    border-radius: 20px;
-    color: white;
-}
 .page img{
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
-.imgdis{
-    text-align: center;
-    color: white;
-    padding-bottom: 16px;
+    max-width: 100%;
 }
 
-.textAbout{
-    color: #234c62;
-}
 .links{
-    text-align: center;
     margin: auto;
     max-width: 50px;
     padding: 5px 15px;
@@ -204,8 +188,17 @@ main{
     max-width: 40px;
     max-height: 40px;
 }
-.links img:hover{
+.links:hover{
     opacity: 0.75;
+}
+.links a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: #234c62;
+    font-size: large;
+    font-weight: bold;
 }
 
 h1{
@@ -215,74 +208,20 @@ h2{
     color: #234c62;
 }
 
-.articleSelect{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: auto;
-    padding-right: 30px;
-    overflow: hidden;
-}
-.articleSelect div:hover{
-    border: solid #C40000 2px;
-}
-.articleSelect div{
-    padding: 0;
-    margin: 10px;
-    box-sizing: border-box;
-    min-width: 0;
-    /*background-color: #234c62;*/
-    border-radius: 20px;
-}
-.articleSelect a{
-    text-decoration: none;
-    text-align: center;
-    color: white;
-}
-.articleSelect p{
-    margin: 10px auto;
-    font-size: large;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-}
-.articleSelect span{
-    font-size: small;
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
-#artColor1 div{
-    background-color: #a12626;
-}
-#artColor2 div{
-    background-color: #234c62;
+.contact p{
+    color: #234c62;
 }
 
 @media (max-width: 920px){
     body .main{
         max-width: 100%;
     }
-    article .articleSelect{
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 15px;
-        padding-right: 20px;
-    }
-    article .articleSelect div{
-        padding: 0;
+    main .page{
+        min-height: auto;
+        height: 100%;
     }
 }
 
-@media (max-width: 650px){
-    body .main{
-        max-width: 100%;
-    }
-    article .articleSelect{
-        grid-template-columns: 1fr;
-        padding-right: 20px;
-    }
-}
 
 /*-----------------------------------------------------------------------------------------------------------------*/
 

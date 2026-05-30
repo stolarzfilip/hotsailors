@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+
+    <title>Kontakt</title>
+
+</head>
+<body>
+
+    <!--Pasek nawigacyjny-->
+    <nav>
+        <div class="baner">
+            <button id="hamburger" onclick="menu()">☰</button>
+            <div id="hotsailors"> <a href="../index.html"> <img id="Logo_HS" src="../images/logo.webp" alt="Logo_HS" width="431px" height="440px"> <span id="hot">Hot</span><span id="sailors">Sailors</span></a></div> <!--baner-->
+            <!-- <div>O</div> -->
+        </div>
+        <ul id="menu" class="menu">
+            <li> <a href="../index.html">Strona główna</a></li>
+            <li> <a href="../about/index.html">O nas</a></li>
+            <li> <a href="index.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+
+    <!--Główna treść (Main)-->
+    <main id="main"> 
+        <article class="page">
+            <h1>Kontakt</h1>
+            <div class="contact"> 
+                <h2>Nasze media</h2>
+                <p>Jeżeli masz jakieś pytanie związane z bezpieczeństwem podczas wyjazdu śmiało pisz do nas na naszych mediach społecznościowych:</p>
+                <div class="links"> <a href="https://www.instagram.com/hotsailors?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <img src="../images/instagram.png" alt="instagram"> <p>Instagram</p></a></div>
+                <div class="links"> <a href="https://www.facebook.com/share/1D2pGntu9k/?mibextid=wwXIfr"> <img src="../images/facebook.png" alt="facebook"> <p>Facebook</p></a></div>
+                <h2>Współpraca</h2>
+                <p>W sprawach współprac biznezowych prosimy o kontakt oficjalną drogą mailową:</p>
+                <div class="links"> <a href="mailto:biuro.hotsailors@gmail.com"> <img src="../images/mail.png" alt="mail"> <span>biuro.hotsailors@gmail.com</span></a></div>
+            </div>
+        </article>
+    </main>
+
+
+    <!--Stopka-->
+    <footer>
+        <div class="fcontent">
+            <div id="hotsailors"> <a href="../index.html"> <img id="Logo_HS" src="../images/logo.webp" alt="Logo_HS" width="431px" height="440px"> <span id="hot">Hot</span><span id="sailors">Sailors</span></a></div>
+            <div> 
+                <p>Kontakt:</p>
+                <div id="massage">
+                    <div class="links"> <a href="https://www.instagram.com/hotsailors?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <img src="../images/instagram.png" alt="instagram" width="512px" height="512px"></a></div>
+                    <div class="links"> <a href="https://www.facebook.com/share/1D2pGntu9k/?mibextid=wwXIfr"> <img src="../images/facebook.png" alt="facebook" width="512px" height="512px"></a></div>
+                    <div class="links"> <a href="mailto:biuro.hotsailors@gmail.com"> <img src="../images/mail.png" alt="mail" width="512px" height="512px"></a></div>
+                </div>
+            </div>
+        </div>
+        <div id="copyright"> <p>&copy HotSailors 2026</p></div>
+    </footer>
+
+    <!--Nawigacja skrypt-->
+    <script>
+        let a1 = true;
+        function menu(){
+            document.getElementById("menu").classList.toggle("active");
+            var tekst = document.getElementById("hamburger");
+            var main = document.getElementById("main");
+            //var aside = document.getElementsByClass("aside");
+            if(a1==true){
+                tekst.innerHTML="×";
+                tekst.style.fontSize="40px";
+                tekst.style.fontWeight="normal";
+                main.style.paddingTop="100px";
+                //aside.style.top="100px";
+                a1 = false;
+            }
+            else{
+                tekst.innerHTML="☰";
+                tekst.style.fontSize="20px";
+                tekst.style.fontWeight="bold";
+                main.style.paddingTop="60px";
+                //aside.style.top="60px";
+                a1 = true;
+            }
+        }
+    </script>
+</body>
+</html>
